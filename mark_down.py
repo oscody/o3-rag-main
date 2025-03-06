@@ -1,9 +1,10 @@
 from openai import OpenAI
-from rag_openai import search
+# from rag_openai import search
+from rag_openaiV2 import search
 
 client = OpenAI()
 
-user_input = input("Enter your message: ")
+user_input = 'tell me about cynthia lobo'
 context = search(user_input)
 prompt_with_context = f"Context: {context}\n\nUser input: {user_input}"
 
