@@ -22,3 +22,9 @@ def search(query):
   docs = vectorstore.similarity_search(query, k=1)
   return docs[0].page_content
 
+# asked this question 
+# loader = DirectoryLoader("/Users/bogle/Dev/obsidian/Bogle/3. Resources/0. note idea draft", glob="job - Rockstar Games - my questions.md")
+print(search("p1 what are two question i wanted to ask in the interview"))
+
+
+print(search("p1 what are two question i wanted to ask in the  Rockstar Games interview"))
