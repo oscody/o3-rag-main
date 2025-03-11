@@ -4,12 +4,12 @@ from rag_openaiV2 import search
 
 client = OpenAI()
 
-user_input = 'tell me about cynthia lobo'
+user_input = 'Find notes on self-reflection'
 context = search(user_input)
 prompt_with_context = f"Context: {context}\n\nUser input: {user_input}"
 
 response = client.chat.completions.create(
-    model="o3-mini-2025-01-31",
+    model="gpt-4o-mini",
     messages=[{"role": "user", "content": prompt_with_context}],
 )
 
